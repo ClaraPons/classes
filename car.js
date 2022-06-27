@@ -6,11 +6,11 @@
 //         this.speed = speed
 //     }   
 
-//     accelerate (numAcc) {
+//     accelerate = (numAcc) => {
 //         this.speed += numAcc
 //     }
 
-//     brake (numBrake) {
+//     brake = (numBrake) =>{
 //         this.speed -= numBrake
 //     }
 
@@ -33,6 +33,8 @@
 // Renault.brake(20)
 // console.log(Renault)
 
+// Renault.describe()
+
 // 2 - TV
 
 // class TV {
@@ -42,7 +44,7 @@
 //         this.volume = 50
 //     }
 
-//     volumeUp (numUp) {
+//     volumeUp = (numUp) => {
 //         if(this.volume + numUp <= 100){
 //             this.volume += numUp
 //         }else{
@@ -50,7 +52,7 @@
 //         }
 //     }
 
-//     volumeDown (numDown) {
+//     volumeDown = (numDown) => {
 //         if(this.volume - numDown >= 0){
 //             this.volume -= numDown
 //         }else{
@@ -58,7 +60,7 @@
 //         }
 //     }
 
-//     channelChange (numChannel) {
+//     channelChange = (numChannel) => {
 //         if(numChannel >= 0 && numChannel <= 50){
 //             this.channel = numChannel
 //         }else{
@@ -66,7 +68,7 @@
 //         }
 //     }
 
-//     reset () {
+//     reset = () => {
 //         if(this.volume !== 50 && this.channel !== 1){
 //             this.volume = 50
 //             this.channel = 1
@@ -98,5 +100,81 @@
 // phillips.reset()
 // console.log(phillips)
 
+
 // 3 - Video games
 
+// Mario Kart 
+
+class Player {
+    constructor(name, car, speed){
+        this.name = name
+        this.car = car
+        this.speed = speed
+    }
+
+    accelerate = (numAcceleration) => {
+        this.speed += numAcceleration
+    }
+
+    brake = (numBrake) => {
+        this.speed -= numBrake
+    }
+
+    bonusAcceleration = (numBonus) => {
+        this.speed = this.speed * numBonus
+    }
+
+    bananaSlowdown = (numSlowdown) => {
+        this.speed = this.speed - numSlowdown
+    }
+
+}
+
+const mario = new Player ("Mario", "Mushroom Car", 0)
+mario.accelerate(40)
+mario.brake(10)
+mario.bonusAcceleration(4)
+mario.bananaSlowdown(30)
+console.log(mario)
+
+class Race {
+    constructor(road, level, players){
+        this.road = road
+        this.level = level
+    }
+
+    roadTurnNumber = (numTurn) => {
+        if(numTurn > 5){
+            this.level = this.level + 2
+        }
+    }
+
+    roadTrap = (numTrap) => {
+        if(numTrap > 3) {
+            this.level = this.level + 4
+        }
+    }
+
+    roadLocation = (inTheAir) => {
+        if(inTheAir){
+            this.level = this.level + 3
+        }else {
+            this.level = this.level - 2
+        }
+    }
+
+    raceDuration = (minutes) => {
+        if(minutes < 2){
+            this.level = this.level + 1
+        }
+    }
+
+}
+
+const rainbowRace = new Race ("Rainbow", 0)
+rainbowRace.roadTurnNumber(4)
+rainbowRace.roadTrap(2)
+rainbowRace.roadLocation(true)
+rainbowRace.raceDuration(1)
+
+console.log(rainbowRace)
