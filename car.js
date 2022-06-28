@@ -21,19 +21,17 @@
 
 // let ford = new Car("Ford", 0)
 // ford.accelerate(50)
-// console.log(ford)
+// ford.describe()
 
 // ford.brake(25)
-// console.log(ford)
+// ford.describe()
 
-// let Renault = new Car("Renault", 0)
-// Renault.accelerate(100)
-// console.log(Renault)
+// let renault = new Car("Renault", 0)
+// renault.accelerate(100)
+// renault.describe()
 
-// Renault.brake(20)
-// console.log(Renault)
-
-// Renault.describe()
+// renault.brake(20)
+// renault.describe()
 
 // 2 - TV
 
