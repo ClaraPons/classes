@@ -42,50 +42,45 @@
 //         this.volume = 50
 //     }
 
-//     volumeUp = (numUp) => {
-//         if(this.volume + numUp <= 100){
-//             this.volume += numUp
+//     volumeUp = () => {
+//         if(this.volume < 100){
+//             this.volume = this.volume + 1
 //         }else{
 //             console.log("volume too high")
 //         }
 //     }
 
 //     volumeDown = (numDown) => {
-//         if(this.volume - numDown >= 0){
-//             this.volume -= numDown
+//         if(this.volume > 0){
+//             this.volume = this.volume - 1
 //         }else{
 //             console.log("volume too low")
 //         }
 //     }
 
 //     channelChange = (numChannel) => {
-//         if(numChannel >= 0 && numChannel <= 50){
+//         if(numChannel >= 1 && numChannel <= 50){
 //             this.channel = numChannel
-//         }else{
-//             this.channel = this.channel
 //         }
 //     }
 
 //     reset = () => {
-//         if(this.volume !== 50 && this.channel !== 1){
 //             this.volume = 50
 //             this.channel = 1
-//         }
 //     }
 
 // }
 
 // const phillips = new TV ("Phillips")
-// phillips.volumeUp(70)
+
+// for (let i = 0; i < 5; i++){
+//     phillips.volumeUp()
+// }
 // console.log(phillips)
 
-// phillips.volumeUp(10)
-// console.log(phillips)
-
-// phillips.volumeDown(30)
-// console.log(phillips)
-
-// phillips.volumeDown(10)
+// for (let i = 0; i < 10; i++){
+//     phillips.volumeDown()
+// }
 // console.log(phillips)
 
 // phillips.channelChange(41)
@@ -103,76 +98,76 @@
 
 // Mario Kart 
 
-class Player {
-    constructor(name, car, speed){
-        this.name = name
-        this.car = car
-        this.speed = speed
-    }
+// class Player {
+//     constructor(name, car, speed){
+//         this.name = name
+//         this.car = car
+//         this.speed = speed
+//     }
 
-    accelerate = (numAcceleration) => {
-        this.speed += numAcceleration
-    }
+//     accelerate = (numAcceleration) => {
+//         this.speed += numAcceleration
+//     }
 
-    brake = (numBrake) => {
-        this.speed -= numBrake
-    }
+//     brake = (numBrake) => {
+//         this.speed -= numBrake
+//     }
 
-    bonusAcceleration = (numBonus) => {
-        this.speed = this.speed * numBonus
-    }
+//     bonusAcceleration = (numBonus) => {
+//         this.speed = this.speed * numBonus
+//     }
 
-    bananaSlowdown = (numSlowdown) => {
-        this.speed = this.speed - numSlowdown
-    }
+//     bananaSlowdown = (numSlowdown) => {
+//         this.speed = this.speed - numSlowdown
+//     }
 
-}
+// }
 
-const mario = new Player ("Mario", "Mushroom Car", 0)
-mario.accelerate(40)
-mario.brake(10)
-mario.bonusAcceleration(4)
-mario.bananaSlowdown(30)
-console.log(mario)
+// const mario = new Player ("Mario", "Mushroom Car", 0)
+// mario.accelerate(40)
+// mario.brake(10)
+// mario.bonusAcceleration(4)
+// mario.bananaSlowdown(30)
+// console.log(mario)
 
-class Race {
-    constructor(road, level, players){
-        this.road = road
-        this.level = level
-    }
+// class Race {
+//     constructor(road, level, players){
+//         this.road = road
+//         this.level = level
+//     }
 
-    roadTurnNumber = (numTurn) => {
-        if(numTurn > 5){
-            this.level = this.level + 2
-        }
-    }
+//     roadTurnNumber = (numTurn) => {
+//         if(numTurn > 5){
+//             this.level = this.level + 2
+//         }
+//     }
 
-    roadTrap = (numTrap) => {
-        if(numTrap > 3) {
-            this.level = this.level + 4
-        }
-    }
+//     roadTrap = (numTrap) => {
+//         if(numTrap > 3) {
+//             this.level = this.level + 4
+//         }
+//     }
 
-    roadLocation = (inTheAir) => {
-        if(inTheAir){
-            this.level = this.level + 3
-        }else {
-            this.level = this.level - 2
-        }
-    }
+//     roadLocation = (inTheAir) => {
+//         if(inTheAir){
+//             this.level = this.level + 3
+//         }else {
+//             this.level = this.level - 2
+//         }
+//     }
 
-    raceDuration = (minutes) => {
-        if(minutes < 2){
-            this.level = this.level + 1
-        }
-    }
+//     raceDuration = (minutes) => {
+//         if(minutes < 2){
+//             this.level = this.level + 1
+//         }
+//     }
 
-}
+// }
 
-const rainbowRace = new Race ("Rainbow", 0)
-rainbowRace.roadTurnNumber(4)
-rainbowRace.roadTrap(2)
-rainbowRace.roadLocation(true)
-rainbowRace.raceDuration(1)
+// const rainbowRace = new Race ("Rainbow", 0)
+// rainbowRace.roadTurnNumber(4)
+// rainbowRace.roadTrap(2)
+// rainbowRace.roadLocation(true)
+// rainbowRace.raceDuration(1)
 
-console.log(rainbowRace)
+// console.log(rainbowRace)
